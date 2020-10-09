@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>login.html</title>
+    <script type="text/javascript">
+        function login(){
+            var id = document.getElementById("id").value;
+            var password = document.getElementById("password").value;
+
+            var info = document.getElementById("information");
+            info.innerHTML = id + "님이 로그인 하셨습니다.";
+            document.getElementById("aLogin").style.display="none";
+            document.getElementById("aLogout").style.display="block";
+
+        }
+        function logout(){
+            document.getElementById("id").value="";
+            document.getElementById("password").value="";
+            document.getElementById("aLogin").style.display="block";
+            document.getElementById("aLogout").style.display="none";
+        }
+    </script>
+    </head>
+    <body>
+    <h1>로그인 화면</h1>
+        <table id="aLogin">
+            <tr><td>id:  <input type="text" id="id" value=""><br></td></tr>
+            <tr><td>password:  <input type="text" id="password" value=""><br></td></tr>
+            <tr><td><input type="button" value="로그인" onclick="login();"></td></tr>
+
+        </table>
+        
+        <table id="aLogout" style="display: none;">
+            <tr>
+                <td><div id="information"</td>
+            </tr>
+            <tr><td><input type="button" value="로그아웃" onclick="logout();"></td></tr>
+        
+        </table>
+       
+       
+    <script>
+
+
+    </script>
+    </body>
+    </form>
+</html>
